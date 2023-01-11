@@ -1,3 +1,3 @@
 # Data Engineering Program
 
-Fall 2022
+November 2022 - January 2023
