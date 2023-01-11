@@ -192,6 +192,12 @@ Joins are used in SQL to combine data from multiple tables and allow for more co
 
 `Some popular alternatives to Terraform include CloudFormation from AWS, Azure Resource Manager from Microsoft, and GCP Deployment Manager from Google. These tools are similar to Terraform in that they allow users to define and provision their infrastructure using code, but they are specific to the respective cloud platforms and may have some unique features and capabilities. Other tools that provide similar functionality to Terraform include Ansible, Puppet, and Chef. These tools are often used for configuration management and can be used in conjunction with Terraform to manage infrastructure.`
 
+## Terraform's commands
+
+- terraform init -- initialize and install
+- terraform plan -- match changes against the previous state
+- terraform apply -- apply changes to cloud
+- terraform destroy -- remove your stack from cloud
 
 
 #### Create Dockerfile and pipeline.py
