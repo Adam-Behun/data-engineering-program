@@ -379,5 +379,3 @@ ORDER BY
 
 - O-Auth
 - Authenticate your local setup with the GCP
-
-
