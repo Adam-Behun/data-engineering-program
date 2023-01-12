@@ -17,7 +17,7 @@ BUCKET = os.environ.get("GCP_GCS_BUCKET")
 # Change the url like you did in the first week using http server with python
 
 dataset_file = "yellow_tripdata_2021-01.csv"
-dataset_url = f"http://10.178.28.105:8000/data/{dataset_file}"
+dataset_url = f"http://10.178.28.36:8000/{dataset_file}"
 path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 parquet_file = dataset_file.replace('.csv', '.parquet')
 BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'trips_data_all')
