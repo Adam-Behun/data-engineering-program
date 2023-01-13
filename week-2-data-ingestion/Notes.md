@@ -43,3 +43,16 @@ Google Credentials is not being read by the system - local_to_gcs_task seems lik
 to run it just go docker-compose up in the the airflow directory, should be 6 services running
 watch the videos again and watch later videos too
 2. write down notes with chat.gpt about this weeks technology
+
+
+
+Tasks
+
+1. homework_ingestion for week 2
+   1. ingest data into gcs
+      1. use pandas to read .gz into parquet via df and change into csv
+
+using homework_ingestion, dockerfile, docker-compose
+
+I did not find a way to loop around the github repo for .gz files so I am going to take the parquet files from their website
+## Jinja
