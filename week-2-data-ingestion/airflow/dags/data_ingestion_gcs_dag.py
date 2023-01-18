@@ -1,3 +1,5 @@
+# Works well because it's just one .csv file
+
 import os
 import logging
 
@@ -60,7 +62,6 @@ default_args = {
     "retries": 1,
 }
 
-# NOTE: DAG declaration - using a Context Manager (an implicit way)
 with DAG(
     dag_id="data_ingestion_gcs_dag",
     schedule_interval="@daily",

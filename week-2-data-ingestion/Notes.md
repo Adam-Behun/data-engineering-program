@@ -55,4 +55,7 @@ Tasks
 using homework_ingestion, dockerfile, docker-compose
 
 I did not find a way to loop around the github repo for .gz files so I am going to take the parquet files from their website
+
 ## Jinja
+
+Learn airflow and the ways we orchestrate data workflows, different services withing airflow
