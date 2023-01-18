@@ -4,4 +4,6 @@ November 2022 - January 2023
 
 # Technology used
 
-# Weeks and lessons learned
+# Extra
+
+Every week has notes and homework files
