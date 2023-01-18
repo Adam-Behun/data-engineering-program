@@ -1,4 +1,4 @@
-# Jupyter script I used to input zones data into postgres database
+# Script inputting zones data into postgres database
 
 import pandas as pd
 from sqlalchemy import create_engine

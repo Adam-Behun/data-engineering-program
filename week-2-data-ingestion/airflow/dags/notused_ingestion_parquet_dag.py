@@ -1,6 +1,6 @@
-# adjusted = website contains data in parquet format = https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
-# tasks needed are extract from website, load into google cloud storage - bucket
-# transform needed for the zones file only - done in homework_ingestion_zones file
+# NOT USED IN PROJECT 
+# Website already contains data in the desired parquet format = https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
 
 import os
 

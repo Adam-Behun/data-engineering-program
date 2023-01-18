@@ -1,4 +1,5 @@
-# Works well because it's just one .csv file
+# Used as an example
+# Loading yellow tripdata January  21 
 
 import os
 import logging
@@ -16,7 +17,7 @@ import pyarrow.parquet as pq
 PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
 BUCKET = os.environ.get("GCP_GCS_BUCKET")
 
-# Change the url like you did in the first week using http server with python
+# Using python's http server 
 
 dataset_file = "yellow_tripdata_2021-01.csv"
 dataset_url = f"http://10.178.28.36:8000/{dataset_file}"
