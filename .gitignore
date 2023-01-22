@@ -13,3 +13,8 @@
 serving_dir
 *.csv
 .ipynb_checkpoints/
+*.csv.gz
+*.parquet
+*.parquet.crc
+*.crc
+_SUCCESS
