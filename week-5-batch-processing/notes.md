@@ -36,3 +36,5 @@
 * Lazy commands
 
 ## Hadoop
+
+Hadoop and hdfs are not as popular anymore thanks to the cloud tech nowadays. 
