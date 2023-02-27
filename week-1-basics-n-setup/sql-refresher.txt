@@ -1,0 +1,49 @@
+PostgreSQl refresher 
+- Focus on JOINS and GROUP BY as those are used the most in data analysis
+Sample analytical queries
+
+Query 1
+
+SELECT 
+	tpep_pickup_datetime,
+	tpep_dropoff_datetime,
+	total_amount,
+	CONCAT(zpu."Borough", ' / ', zpu."Zone") AS "pickup_loc",
+	CONCAT(zdo."Borough", ' / ', zdo."Zone") AS "dropoff_loc"
+FROM
+	yellow_taxi_trips t JOIN zones zpu 
+		ON t."PULocationID" = zpu."LocationID" 
+	JOIN zones zdo 
+		ON t."DOLocationID" = zdo."LocationID"
+LIMIT 100;
+
+Query 2
+
+SELECT 
+	tpep_pickup_datetime,
+	tpep_dropoff_datetime,
+	total_amount,
+	CONCAT(zpu."Borough", ' / ', zpu."Zone") AS "pickup_loc",
+	CONCAT(zdo."Borough", ' / ', zdo."Zone") AS "dropoff_loc"
+FROM
+	yellow_taxi_trips t LEFT JOIN zones zpu 
+		ON t."PULocationID" = zpu."LocationID" 
+	LEFT JOIN zones zdo 
+		ON t."DOLocationID" = zdo."LocationID"
+LIMIT 100;
+
+Query 3
+
+SELECT 
+	CAST(tpep_dropoff_datetime AS DATE) as "day",
+	"DOLocationID",
+	COUNT(1) as "Count",
+	MAX(total_amount) as "Amount",
+	MAX(passenger_count) as "PassengerCount"
+FROM
+	yellow_taxi_trips t
+GROUP BY
+	1, 2
+ORDER BY 
+	"day" ASC,
+	"DOLocationID" ASC;
