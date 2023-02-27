@@ -1,3 +1,13 @@
+# Data processing
+
+Data exchange and its communication channels - remember the example of a postal service
+Computers just use zeros and ones 
+
+## Latency 
+
+- time that it takes from source to destination
+- low latency means that we can make faster decisions such as recommendation systems and systems where we need to access the data ASAP 
+
 # Batch processing
 
 * Takes large volumes of the data at a scheduled time

@@ -1,12 +1,28 @@
-# Data processing
+# Stream Processing
+- Batch processing is high-latency
+- Data is is continuously processed as it flows through the pipeline
+- Useful for applications where low latency is important - real-time fraud detection or recommendation systems
+- "Data at Rest" vs "Data in Motion"
+- You do not persist the data, you analyze it right away, acting on it immediately
+- You can select from the stream
+- There are 2 subscrubers to the stream
+  - Real time keeping no history
+  - The one keeping history
+- Join different streams or joins - driver's data and the current ride
 
-Data exchange and its communication channels - remember postal Service
-Computers use APIs 
-Why do we need streaming for data? Is batch not good enough?
-
+## Streaming data pipeline and example tech stack
+- Source 
+API, IoT, Web scraping, Social Media, Enterprise Apps
+- Data Ingestion
+  - Messaging System
+Kafka, AirFlow, NiFi
+- Processing Layer
+Spark, Flink, Python (Pandas, NumPy)
+- Storage Layer
+Cassandra, Hadoop, Amazon S3, 
 
 # Kafka
-
+- Kafka stack helping me process data in real/near real-time and do analysis on it using ksql and connecting to my destination using kconnect
 - Different configurations based on what the data and the task looks like. 
 - This is the basics:
     Cluster (set of nodes), topic (collection of events), messsages inside the topic (key, value, timestamp), storing and replications, retention, partitions and paralization, producing, consuming (consumer groupid), offset (moving the pointer further), acknowledgment
@@ -52,12 +68,6 @@ Acknowledgment
 Kafka is used because
 - Robustness, scalability, and flexibility
 
-Kafka CDC
-
-Kafka stream Join
-
-Unit testing
-
 Stream windowing
 - tumbling
 - hopping
@@ -84,14 +94,3 @@ Avro
 - data serialization format making producers and consumers compatible
 - Avro is the communication layer between them
 - reads as simple as json for human but the date is in binary format so it is really efficient
-
-What is gradlew?
-
-
-Horizontal and vertical scale
-
-Broadcasting
-
-Global KTable
-
-Kafka Connect
