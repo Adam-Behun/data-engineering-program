@@ -1,89 +1,107 @@
 # Batch processing
 
-# Data processing 
-* Batch
-  * takes all the data for a day for example at once 
-  * daily and hourly
-  * 80% used batch
-* Streaming
-  * one ride gets processed right away, separatelly 
+* Takes large volumes of the data at a scheduled time
+* 80% of data processing is done using batch
+
+Problem was that unstructured large data sets were difficult to process
+One machine takes a lot of time
+Hadoop is a framework that gives me the capability of parallel processing:
+- Distributed File System - HDFS stores the data
+- MapReduce processes the data
+- Yarn package manager storing all dependencies locally
+- Open-source - you have to buy the machines in order to build an HDFS, the software framework is free
+
+## Distributed file systems
+
+- Parallel processing
+  - Network bandwidth
+- Different physical machines connected over a network
+  - Each machine has local physical file system
+  - Distributed file system (DFS) means it is not physical
+  - Cluster is machines connected over a network
+    - Master remembers the metadata of the other nodes
+    - Replication factor - block are replicated in different nodes
+  
+## MapReduce
+
+- Map (Divide) and Reduce (Conquer)
+- actual parallel processing with Hadoop
+- job scheduling and tracking job progress
+- arrived at yet another computational limits
+- moved to yarn - MapReduce version 2
+
+## Yarn
+
+- splits map and reduce into resource manager and application master
+- central resource manager
+- package manager making stuff much faster and dependencies available offline
 
 
-## Tech used for batch processing
-* Python
-* SQL
-* Spark
-* Flink
-* Using Airflow to orchestrate the workflow
-### Advantages
-* simplicity, retry, scale 
-### Disadvantages
-* Delay 
+# Hadoop and Spark
+- Hadoop is older
+- Spark runs faster but requires more RAM
+- Hadoop runs in batches (think of it as queues), but spark does batch, real-time, and graph
+- Hadoop is complex to code, spark is relativelly simple
+- Spark has built-in ML library
 
+Spark does not have storage.
+It is common to use HDFS as a file system and Spark as the processor.
+You can deploy Spark to an RDBMS.
 
 ## Spark
-* Batch jobs as well as streaming
-* Engine
-* Cluster
-* Multi-language --> wrapper for python is called PySpark
-* Spark is Scala-native
-* Raw data -> SQL, Athena -> Spark -> Python train ML
 
-* Other tech: Hive, Presto, Athena
+- Data processing framework faster than Hadoop
+- In-memory processing - understand RAM and cache
+- Streaming and real-time processing
+- Ability to work in many different languages
+- Resilient Distributed Datasets
+- Directed Acyclic Graph
+- Ability to process structured, and unstructured data
 
-* Spark partitions
+### RDDs as Spark's data structure
 
-* Lazy commands
+- Immutable, distributed collection of objects that can be operated on in parallel
+- You can do queries on RDDs and those can return new RDDs or results
+- Transformations and actions
 
-## Hadoop
+### Directed Acyclic Graph
+- they represent the relationship between different entitites
+- different processing steps in the process
+- set of vertices and edges connecting them, there are no edges
+- Spark divides the entire computation into stages represented by DAGs
+- DAGs allow Spark to work efficiently in a distributed environment
 
-Hadoop and hdfs are not as popular anymore thanks to the cloud tech nowadays. 
+### Spark components
+- Spark core - base engine which has RDDs
+- Spark SQL
+- Spark Streaming
+- MLlib
+- GraphX - data represented naturally by a network
 
-Resilient Distributed Datasets (RDD)
+### Spark-SQL
+- data is stored in a RDBMS and they use spark to process the data
+- reads from csv, json, jdbc
+- Dataframe DSL
 
-Dataframes, RDDs, partitions, parallel computing (processing), distributed data, map partition
+### Spark streaming
+- real-time processing of what the recommendations are for the customer
+- processes the data as they come in - clicks of a customer for example
 
-lambda function
+### Spark MLlib
+- Spark for processing and libraries for ML work, clustering, supervised, unsupervised learning
 
-why jupyter and not just python
-what's the difference between jupyter and ipython
+### GraphX
+- Data naturally in a network like Facebook, LinkedIn data
 
-what is java
-
-data structures -- RDD
-
-what are the different nodes within spark - paralel computing
-what are the different data structures and algorithms used in the backend
-why do we actually need this? Parallel processing? Partitioning?
-
-Where are the executors of the spark framework? Is this VMs? 
-
-ML in pandas
-
-Spark internals - clusters
-
-what are internals and clusters
-
-stand-alone mode
+### Spark Cluster Managers
+- Spark stand-alone mode
+- Mesos
+- Hadoop Yarn
+- Kubernetes
 
 
-# NOTES:
-
-I cannot execute this command while creating a Local Spark Cluster:
-min --> 2:13
-https://www.youtube.com/watch?v=HXBwSlXo5IA&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=54&ab_channel=DataTalksClub%E2%AC%9B
-
-## I tried to install older version of java
-
-Set up env. variables
-SPARK_HOME and JAVA_HOME
-I might have to go through the installation of hadoop, spark, and java again
-
-## Error Message:
-
-failed to launch: nice -n 0 C:\apps\spark-3.0.3-bin-hadoop3.2/bin/spark-class org.apache.spark.deploy.master.Master --host --port 7077 --webui-port 8080
-  Spark Command: C:\apps\jdk-11.0.13\bin\java -cp C:\apps\spark-3.0.3-bin-hadoop3.2/conf\;C:\apps\spark-3.0.3-bin-hadoop3.2\jars\* -Xmx1g org.apache.spark.deploy.master.Master --host --port 7077 --webui-port 8080
-  ========================================
-  C:\apps\jdk-11.0.13\bin\java -cp "C:\apps\spark-3.0.3-bin-hadoop3.2/conf\;C:\apps\spark-3.0.3-bin-hadoop3.2\jars\*" -Xmx1g org.apache.spark.deploy.master.Master --host --port 7077 --webui-port 8080
-  C:\apps\spark-3.0.3-bin-hadoop3.2/bin/spark-class: line 96: CMD: bad array subscript
-full log in C:\apps\spark-3.0.3-bin-hadoop3.2/logs/spark--org.apache.spark.deploy.master.Master-1-Nope.out
+### Applications of Spark
+- Real-time processing for banking industry
+- Alibaba real-time recommendations
+- Iqvia analysing patients based on mdeical history
+- Netflix user recommnedations
