@@ -1,29 +1,60 @@
-# Notes for week 3 of Data Engineering Zoomcamp -> Data Warehouse
+# Data Warehouse
+
+# OLTP and OLAP
+
+- OLAP = Online analytical processing
+- OLTP = Online transactional processing
+
+- Many companies have OLTP (processing massive number of transactions) to provide data to OLAP (providing data for data analysts)
+- Manage daily transactions or have single platform for all my data
+
+## OLAP
+- BI, financial analysis, data from a structured warehouse
+- OLAP Cube
+  - Allowing quick queries
+
+## OLTP
+- Real-time execution of transactions - ATM, password changes
+- Relational Database processing relativelly large volume of transactions
+- Multi users and indexed datasets 
 
 
-Slides: https://docs.google.com/presentation/d/1a3ZoBAXFk8-EhUsd7rAZd-5p_HpltkzSeujjRGB2TAI/edit#slide=id.p
+# BigQuery
+- Serverless data warehouse with two parts - Replicated distributed storage and High-available cluster compute (Dremel)
+- Google File System (2003) inspired Hadoop
+- Colossus (2010) - Google Cloud Storage and BIgQuery
+    - Internals - https://www.youtube.com/watch?v=eduHi1inM4s&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25&ab_channel=DataTalksClub%E2%AC%9B
 
-## Topics covered
+## Storage
 
-- cloud composer vs airflow vs kubernetes -> data workflow orchestration
-- Moving from GCS to BQ
-- Data Warehouse
-- OLTP, OLAP
-- BigQuery
-- BigQuery public datasets, costs, partitioning and clustering and when to use each 
-- Cost reduction and query performance
+- BigQuery is an analytical tool using columnar storage which makes it fast in aggregations 
+- Capacitor as the file format that reorders the rows
+- Colossus - distributed file system
+- Storage optimization
+  - Partitioning based on:
+      - Ingestion time
+      - Date-TimeStamp Column
+      - Integer column
+  - Clustering
+    - Sorting tables based on particular columns (max=4)
 
-### Internals of BQ -> https://www.youtube.com/watch?v=eduHi1inM4s&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25&ab_channel=DataTalksClub%E2%AC%9B
-* look at references at the end
-Storing is cheaper. computing is more expensive. 
-record-oriented and column-oriented --> data structures
-Aggregations
+## Processing in BigQuery
+- High-available cluster compute (Dremel)
+- Distributed
+- Query your data in BQ means
+  - API request management
+  - Lexing and parsing SQL
+  - Catalog resolution
+  - Query Planning
+  - Query Plan execution
+  - Scheduling and dynamic planning
+  - Finalized results
 
-Dremel serving tree, leaf nodes
 
-ML in BigQuery
+## ML in BigQuery
 - feature auto and manual preprocessing 
 - multi-hot encoding
 
-Tensorflow
-Postman
+# Tensorflow
+
+# Postman
