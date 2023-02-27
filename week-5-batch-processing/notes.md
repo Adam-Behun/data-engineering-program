@@ -75,9 +75,9 @@ You can deploy Spark to an RDBMS.
 - Transformations and actions
 
 ### Directed Acyclic Graph
-- they represent the relationship between different entitites
-- different processing steps in the process
-- set of vertices and edges connecting them, there are no edges
+- Represent the relationship between different entitites
+- Different processing steps in the process
+- Set of vertices and edges connecting them, there are no edges
 - Spark divides the entire computation into stages represented by DAGs
 - DAGs allow Spark to work efficiently in a distributed environment
 

@@ -103,23 +103,48 @@
   - have it saved in vs code and run --> docker-compose up -d
   - localhost:8080 in a browser
 
-# File formats
+# File formats to know
 
-## YAML file
+## YAML
 
-`YAML files are commonly used in applications that need to represent complex data structures in a simple and human-readable way. They are often used as configuration files for applications, because the simple syntax and indentation-based structure make them easy to read and edit.`
+YAML files are commonly used in applications that need to represent complex data structures in a simple and human-readable way. They are often used as configuration files for applications, because the simple syntax and indentation-based structure make them easy to read and edit.
 
-## csv file
+## CSV
 
-`A CSV (comma-separated values) file is a type of plain text file that stores tabular data in a simple, human-readable format. Each line of the file represents a single row of data, and the values within each line are separated by commas.`
+A CSV (comma-separated values) file is a type of plain text file that stores tabular data in a simple, human-readable format. Each line of the file represents a single row of data, and the values within each line are separated by commas.
 
-## csv file and excel
+## JSON
 
-`Yes, CSV is related to Excel in that CSV files can be opened and edited in Excel. CSV files are plain text files that store tabular data, and Excel is a popular program for working with tabular data.`
+A JSON (JavaScript Object Notation) file is a type of plain text file that is used to store data in a structured, human-readable format. JSON files use a standard syntax for representing data in key-value pairs.
+- application 
+- name-value pairs -- object
+- ordered list od values
 
-## JSON file
+## Avro
+- row oriented storage format
+- schema is stored as JSON within file
+- ideal for write heavy operations
+- excellent for entire row consumption and processing
 
-`A JSON (JavaScript Object Notation) file is a type of plain text file that is used to store data in a structured, human-readable format. JSON files use a standard syntax for representing data in key-value pairs.`
+## ORC
+- column oriented file storage
+- schema is stored in the footer of the file
+- schema is limited to adding new columns
+- works well with Hive
+
+## Parquet
+- column oriented storage format
+- schema is stored in the footer of the file
+- processing parquet files outputs multiple files
+- due to merging of files across multiple files, schema evolution is more expensive
+- ideal for read heavy operations
+- works great with spark
+
+## XML
+- verbose and redundant markup language
+- high storage costs
+- doe not support an array
+
 
 # Jupyter notebook
 
