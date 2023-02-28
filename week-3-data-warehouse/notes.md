@@ -50,10 +50,7 @@
   - Scheduling and dynamic planning
   - Finalized results
 
-
-## ML in BigQuery
-- feature auto and manual preprocessing 
-- multi-hot encoding
+Optimizing BigQuery SQL queries. 
 
 # Tensorflow
 
