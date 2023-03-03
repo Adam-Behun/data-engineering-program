@@ -64,7 +64,6 @@ Offset
 Acknowledgment
 - fire and forget or others
 
-
 Kafka is used because
 - Robustness, scalability, and flexibility
 

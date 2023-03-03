@@ -20,6 +20,7 @@
 
 
 # BigQuery
+- https://www.youtube.com/playlist?list=PLIivdWyY5sqLAbIdmcMwsxWg-w8Px34MS
 - Serverless data warehouse with two parts - Replicated distributed storage and High-available cluster compute (Dremel)
 - Google File System (2003) inspired Hadoop
 - Colossus (2010) - Google Cloud Storage and BIgQuery
@@ -52,6 +53,14 @@
 
 Optimizing BigQuery SQL queries. 
 
-# Tensorflow
+# Tensorflow, Pytorch
+- Deep learning libraries - not the focus right now
 
 # Postman
+- Helps me test, explore, and collaborate on APIs
+
+# API - Application Programming Interface 
+- the problem before was that for every application that needed to communicate with another application, they had to be manually configured and any change in one needed to be reflected in the other as well (this was very inneficient and difficult to manage)
+- APIs were invented and are solving this problem by providing a standardized way for applications to communicate with each other
+- API is essentially a set of rules, protocols, and tools that enable applications to interact with each other, share data, and perform actions
+- way of abstraction, I do not need to know how the other app was implemented and still I can get its data and services
