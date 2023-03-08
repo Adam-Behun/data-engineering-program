@@ -109,7 +109,6 @@ You can deploy Spark to an RDBMS.
 - Hadoop Yarn
 - Kubernetes
 
-
 ### Applications of Spark
 - Real-time processing for banking industry
 - Alibaba real-time recommendations
