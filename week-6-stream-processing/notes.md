@@ -5,7 +5,7 @@
 - "Data at Rest" vs "Data in Motion"
 - You do not persist the data, you analyze it right away, acting on it immediately
 - You can select from the stream
-- There are 2 subscrubers to the stream
+- There are 2 subscribers to the stream
   - Real time keeping no history
   - The one keeping history
 - Join different streams or joins - driver's data and the current ride
@@ -92,4 +92,4 @@ Compatibility
 Avro
 - data serialization format making producers and consumers compatible
 - Avro is the communication layer between them
-- reads as simple as json for human but the date is in binary format so it is really efficient
+- reads as simple as json for human but the data is in binary format so it is really efficient for computers

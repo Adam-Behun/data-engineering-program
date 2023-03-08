@@ -1,11 +1,18 @@
 # Data Engineering Program
 
-November 2022 - January 2023
+- Introduction to Data Engineering
+- November 2022 - January 2023
 
 # Technology used
+- PostgreSQL
+- Docker
+- GCP BigQuery and Google Cloud Storage
+- Terraform
+- Airflow
+- DBT Cloud
+- Spark
+- Kafka
 
-# Extra
+# Final Project
 
-Every week has notes and homework files
-
-Use this https://www.youtube.com/watch?v=LD7OsuABBN0&ab_channel=DatawithZach
+- TBD
