@@ -1,12 +1,12 @@
 # Data Engineering Program
 
 - Introduction to Data Engineering
-- November 2022 - January 2023
+- November 2022 - February 2023
 
 # Technology used
 - PostgreSQL
 - Docker
-- GCP BigQuery and Google Cloud Storage
+- Google Cloud Platform BigQuery, Google Cloud Storage, and Cloud SQL
 - Terraform
 - Airflow
 - DBT Cloud
