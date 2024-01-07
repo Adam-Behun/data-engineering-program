@@ -19,7 +19,7 @@ The data journey started with the extraction of raw records from the [NYC TLC Tr
 ## Data Visualization in Looker
 
 <p align="center">
-  <img src="looker-visual.png" alt="Data Visualization in Looker" height="350" width="350"/> 
+  <img src="looker-visual.png" alt="Data Visualization in Looker" height="350" width="450"/> 
 </p>
 
 Dashboard offering a insights on New York City's yellow taxi usage, delivering insights spanning two years.
