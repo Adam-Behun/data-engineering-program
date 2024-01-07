@@ -4,11 +4,15 @@
 
 In this project, I used supervised machine learning to transform raw data from the New York City Taxi and Limousine Commission into predictive insights. My goal was to predict taxi fares and tips, enhancing taxi service efficiency.
 
+<p align="center">
 <img src="taxi.jpg" alt="Yellow Taxi - New York City" height="300"/> 
+</p>
 
 ## Data Pipeline Architecture
 
+<p align="center">
 <img src="de-program-architecture.png" alt="Data Pipeline Architecture" height="300"/> 
+</p>
 
 The data journey started with the extraction of raw records from the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), which were then ingested, processed, and analyzed through a data pipeline. Python, Airflow, and Apache Spark made the backbone of the system, leading to Google BigQuery for analytical queries.
 
