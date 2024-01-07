@@ -6,7 +6,7 @@ In this project, I used a number of technologies to transform raw data from the 
 
 ## Data Pipeline Architecture
 
-![Data Pipeline Architecture](data-engineering-program\de-program-architecture.png)
+![Data Pipeline Architecture](![Data Pipeline Architecture](de-program-architecture.png))
 
 The data journey started with the extraction of raw records from the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), which were then ingested, processed, and analyzed through a data pipeline. Python, Airflow, and Apache Spark made the backbone of the system, leading to Google BigQuery for analytical queries.
 
@@ -16,7 +16,7 @@ In this project, we ingested and processed comprehensive trip record data for ye
 
 ### Data Source
 
-The data utilized in this analysis can be found on the [NYC TLC's Trip Record Data website](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+The data utilized in this analysis can be found on the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
 
 ### Yellow and Green Taxi Data Fields
 
