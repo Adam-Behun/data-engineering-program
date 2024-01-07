@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-In this project, I used a number of technologies to transform raw data from the New York City Taxi and Limousine Commission into predictive insights. My goal was to predict taxi fares and tips, providing a valuable resource for strategic urban planning and enhancing taxi service efficiency.
+In this project, I used supervised machine learning to transform raw data from the New York City Taxi and Limousine Commission into predictive insights. My goal was to predict taxi fares and tips, enhancing taxi service efficiency.
+
+![Yellow Taxi - New York City](taxi.jpg)
 
 ## Data Pipeline Architecture
 
@@ -40,13 +42,11 @@ The data utilized in this analysis can be found on the [NYC TLC Trip Record Data
 | `Pickup_DateTime`        | The date and time when the ride was initiated. |
 | `Pickup_Location_ID`     | The taxi zone location ID for the pickup.      |
 
-**Note on Data Accuracy**: The datasets were collected and provided to the NYC TLC by technology providers authorized under the Taxicab & Livery Passenger Enhancement Programs (TPEP/LPEP). FHV trip records are generated from submissions made by bases. The TLC performs routine reviews of these records, however, neither the TLC nor our project can guarantee the absolute accuracy or completeness of the data.
-
 ## Technology Stack
 
-During our data engineering program, which ran from November 2022 to February 2023, we harnessed a comprehensive suite of technologies, libraries, and systems to facilitate robust and scalable data engineering solutions.
+During this data engineering programI used the following suite of technologies, libraries, and systems.
 
-- **Python Libraries**: Incorporated various Python libraries such as Pandas, NumPy, PyArrow, and others for data manipulation and processing tasks.
+- **Python Libraries**: Incorporated Python libraries such as Pandas, NumPy, PyArrow, and others for data manipulation and processing tasks.
 - **Shell Scripting**: Used for automating repetitive tasks, managing system operations, and streamlining data processing workflows.
 - **Linux**: The preferred operating system for its stability, performance, and flexibility in managing data-intensive applications and services.
 - **PostgreSQL**: Employed for sophisticated database management and operations.
@@ -58,15 +58,9 @@ During our data engineering program, which ran from November 2022 to February 20
 - **Apache Spark**: Deployed for processing large-scale data with speed and ease.
 - **Apache Kafka**: Leveraged for its real-time data streaming capabilities to process and move large amounts of data efficiently.
 
-Our technology stack was carefully selected to ensure each component of our data pipeline was optimized for performance, reliability, and scalability, enabling us to transform raw data into actionable insights with precision.
-
-## Machine Learning Insights
-
-Through BigQuery, I implemented SQL-based machine learning models to gain insights into fare and tip predictions, which led to a deeper understanding of the factors influencing taxi service economics. 
-
 ## Key Business Impact of the Tip Prediction Model
 
-The predictive analysis of tipping behavior stands out as a game-changer in the taxi service industry. By leveraging machine learning to forecast tip amounts accurately, we empower taxi companies with actionable insights that can revolutionize their pricing strategies and enhance customer satisfaction. One of the most impactful outcomes is the ability to inform dynamic pricing models which adapt to tipping trends, thus maximizing profitability without compromising on service quality.
+Through BigQuery, I implemented SQL-based supervised machine learning model to forecast tip amounts for different types of taxi. This way, we give taxi companies actionable insights that can impact their pricing strategies and enhance customer satisfaction. One of the most impactful outcomes is the ability to inform dynamic pricing models which adapt to tipping trends, thus maximizing profitability without compromising on service quality.
 
 ```sql
 -- Hyperparameter tuning to optimize the prediction model
