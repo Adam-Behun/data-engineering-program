@@ -18,33 +18,26 @@ The data journey started with the extraction of raw records from the [NYC TLC Tr
 
 ## Data Visualization in Looker
 
-## Comprehensive Data Analysis of NYC Yellow Taxi Services
+<p align="center">
+  <img src="looker-visual.png" alt="Data Visualization in Looker" height="350" width="350"/> 
+</p>
 
-This dashboard offers a deep dive into the dynamics of New York City's yellow taxi usage, delivering insights from an extensive dataset spanning two years.
+Dashboard offering a insights on New York City's yellow taxi usage, delivering insights spanning two years.
 
 ### Daily Trip Volume Trends
-
-The line graph reveals the daily trip volumes, showing the ebb and flow of taxi usage. Such data is crucial for understanding peak times and can aid in optimizing driver schedules and fleet management.
+The line graph reveals the daily trip volumes, showing peak times and can aid in optimizing driver schedules and fleet management. 
 
 ### Total Trips Overview
-
-With a staggering total of over 55 million trips, this metric illustrates the vast scope of the taxi service industry in NYC, highlighting the critical role it plays in urban mobility.
+There is over 55 million trips in this dataset. This metric illustrates the vast scope of the taxi service industry in NYC, highlighting the critical role it plays in urban mobility.
 
 ### Service Type Distribution
-
-The pie chart exclusively represents yellow taxi services, indicating a focused analysis on a specific service type within the city's transportation network.
+The pie chart represents yellow taxi services only, indicating a focused analysis on a specific service type within the city's transportation network.
 
 ### Pickup Zone Popularity
-
-A detailed table enumerates the top pickup zones. This information can strategically inform taxi dispatching to ensure that high-demand areas have adequate service availability.
+A detailed table shows the top pickup zones. This information can inform taxi dispatching to ensure that high-demand areas have adequate service availability.
 
 ### Monthly and Yearly Comparison
-
-The bar chart compares monthly trip volumes across 2019 and 2020, providing a clear visual representation of how external factors, such as the COVID-19 pandemic, may have impacted service usage.
-
-<p align="center">
-  <img src="looker-visual.png" alt="Data Visualization in Looker" height="300"/> 
-</p>
+The bar chart compares monthly trip volumes across 2019 and 2020, providing a clear visual representation of how external factors (COVID-19) have impacted service usage.
 
 ## Data Description
 
