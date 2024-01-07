@@ -16,6 +16,36 @@ In this project, I used supervised machine learning to transform raw data from t
 
 The data journey started with the extraction of raw records from the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), which were then ingested, processed, and analyzed through a data pipeline. Python, Airflow, and Apache Spark made the backbone of the system, leading to Google BigQuery for analytical queries.
 
+## Data Visualization in Looker
+
+## Comprehensive Data Analysis of NYC Yellow Taxi Services
+
+This dashboard offers a deep dive into the dynamics of New York City's yellow taxi usage, delivering insights from an extensive dataset spanning two years.
+
+### Daily Trip Volume Trends
+
+The line graph reveals the daily trip volumes, showing the ebb and flow of taxi usage. Such data is crucial for understanding peak times and can aid in optimizing driver schedules and fleet management.
+
+### Total Trips Overview
+
+With a staggering total of over 55 million trips, this metric illustrates the vast scope of the taxi service industry in NYC, highlighting the critical role it plays in urban mobility.
+
+### Service Type Distribution
+
+The pie chart exclusively represents yellow taxi services, indicating a focused analysis on a specific service type within the city's transportation network.
+
+### Pickup Zone Popularity
+
+A detailed table enumerates the top pickup zones. This information can strategically inform taxi dispatching to ensure that high-demand areas have adequate service availability.
+
+### Monthly and Yearly Comparison
+
+The bar chart compares monthly trip volumes across 2019 and 2020, providing a clear visual representation of how external factors, such as the COVID-19 pandemic, may have impacted service usage.
+
+<p align="center">
+  <img src="looker-visual.png" alt="Data Visualization in Looker" height="300"/> 
+</p>
+
 ## Data Description
 
 In this project, we ingested and processed comprehensive trip record data for yellow and green taxis, as well as For-Hire Vehicles (FHV), provided by the NYC Taxi and Limousine Commission (TLC). Detailed records from these datasets offer valuable insights into urban transportation patterns and behaviors.
