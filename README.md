@@ -1,101 +1,94 @@
-# NYC Taxi Fare and Tip Prediction Analysis
+# 55 Million Rides in NYC: A Supervised ML Dive into Tipping Patterns
 
 ## Project Overview
 
-In this project, I used supervised machine learning to transform raw data from the New York City Taxi and Limousine Commission into predictive insights. My goal was to predict taxi fares and tips, enhancing taxi service efficiency.
+This project, titled "55 Million Rides in NYC," uses supervised machine learning to find tipping patterns in New York's taxi markets. By analyzing a vast dataset from the New York City Taxi and Limousine Commission (TLC), I developed a model that predicts fare and tip amounts, providing key insights that could impact the taxi industry's approach to pricing and customer service. 
 
 <p align="center">
-<img src="taxi.jpg" alt="Yellow Taxi - New York City" height="300"/> 
+  <img src="taxi.jpg" alt="Yellow Taxi - New York City" height="300"/>
 </p>
+
+## Data Description
+The project harnessed data from yellow and green taxis, and For-Hire Vehicles (FHV), encompassing numerous aspects of urban transportation. These records offer a granular look at service patterns and commuter behavior, forming the basis of our predictive analysis.
+
+### Data Source
+The comprehensive dataset is available through the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), ensuring a solid foundation for our analytics.
+
+### Key Data Fields
+
+We processed critical fields that capture the essence of each trip, such as pick-up and drop-off times and locations, trip distances, fares, and more. These fields not only inform our model but also provide insights into passenger habits and preferences.
+
+| Field Name             | Description                                      |
+|------------------------|--------------------------------------------------|
+| `Pickup_DateTime`      | Start time of the trip.                          |
+| `Dropoff_DateTime`     | End time of the trip.                            |
+| `Pickup_Location`      | Initial location of the passenger(s).            |
+| `Dropoff_Location`     | Final destination of the passenger(s).           |
+| `Trip_Distance`        | Distance covered during the trip.                |
+| `Fare_Amount`          | Cost of the trip excluding additional charges.   |
+| `Rate_Type`            | Tariff rate type applied to the trip.            |
+| `Payment_Type`         | Method of payment utilized.                      |
+| `Passenger_Count`      | Number of passengers as reported by the driver. |
+
+### FHV Data
+
+FHV data adds another layer, giving us a glimpse into the dispatching side of the industry and further enriching our analysis.
+
+| Field Name               | Description                                 |
+|--------------------------|---------------------------------------------|
+| `Base_License_Number`    | Dispatching base's license number.          |
+| `Pickup_DateTime`        | Time when the FHV ride started.             |
+| `Pickup_Location_ID`     | Taxi zone ID where the ride commenced.      |
+
 
 ## Data Pipeline Architecture
 
-<p align="center">
-<img src="de-program-architecture.png" alt="Data Pipeline Architecture" height="300"/> 
-</p>
+The backbone of this analysis was a data pipeline designed to handle and process over 55 million taxi trip records. It combined Python scripting, the structured workflow orchestration of Apache Airflow, and the processing power of Apache Spark, all culminating in the comprehensive analytical capabilities of Google BigQuery.
 
-The data journey started with the extraction of raw records from the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), which were then ingested, processed, and analyzed through a data pipeline. Python, Airflow, and Apache Spark made the backbone of the system, leading to Google BigQuery for analytical queries.
+<p align="center">
+  <img src="de-program-architecture.png" alt="Data Pipeline Architecture" height="300"/>
+</p>
 
 ## Data Visualization in Looker
 
 <p align="center">
-  <img src="looker-visual.png" alt="Data Visualization in Looker" height="350" width="450"/> 
+  <img src="looker-visual.png" alt="Data Visualization in Looker" height="350" width="450"/>
 </p>
 
-Dashboard offering a insights on New York City's yellow taxi usage, delivering insights spanning two years.
+The Looker dashboard above serves as a window into the extensive analysis conducted on NYC's yellow taxi usage over two years. It showcases daily traffic volumes, zone popularity, and service type distributions, all of which are instrumental in deciphering the DNA of NYC's taxi services.
 
-### Daily Trip Volume Trends
-The line graph reveals the daily trip volumes, showing peak times and can aid in optimizing driver schedules and fleet management. 
+### Insights and Business Impact
 
-### Total Trips Overview
-There is over 55 million trips in this dataset. This metric illustrates the vast scope of the taxi service industry in NYC, highlighting the critical role it plays in urban mobility.
-
-### Service Type Distribution
-The pie chart represents yellow taxi services only, indicating a focused analysis on a specific service type within the city's transportation network.
-
-### Pickup Zone Popularity
-A detailed table shows the top pickup zones. This information can inform taxi dispatching to ensure that high-demand areas have adequate service availability.
-
-### Monthly and Yearly Comparison
-The bar chart compares monthly trip volumes across 2019 and 2020, providing a clear visual representation of how external factors (COVID-19) have impacted service usage.
-
-## Data Description
-
-In this project, we ingested and processed comprehensive trip record data for yellow and green taxis, as well as For-Hire Vehicles (FHV), provided by the NYC Taxi and Limousine Commission (TLC). Detailed records from these datasets offer valuable insights into urban transportation patterns and behaviors.
-
-### Data Source
-
-The data utilized in this analysis can be found on the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
-
-### Yellow and Green Taxi Data Fields
-
-| Field Name             | Description                                      |
-|------------------------|--------------------------------------------------|
-| `Pickup_DateTime`      | The date and time when the ride was initiated.   |
-| `Dropoff_DateTime`     | The date and time when the ride was concluded.   |
-| `Pickup_Location`      | The location where passengers were picked up.    |
-| `Dropoff_Location`     | The location where passengers were dropped off.  |
-| `Trip_Distance`        | The distance of the trip.                        |
-| `Fare_Amount`          | The cost of the trip before tips and surcharges. |
-| `Rate_Type`            | The type of rate applied to the trip.            |
-| `Payment_Type`         | The method of payment used.                      |
-| `Passenger_Count`      | The number of passengers reported by the driver. |
-
-### FHV Data Fields
-
-| Field Name               | Description                                    |
-|--------------------------|------------------------------------------------|
-| `Base_License_Number`    | The license number of the dispatching base.    |
-| `Pickup_DateTime`        | The date and time when the ride was initiated. |
-| `Pickup_Location_ID`     | The taxi zone location ID for the pickup.      |
+- **Daily Traffic Volumes**: Identifying peak times for optimized driver schedules and fleet deployment.
+- **Total Trip Insights**: Over 55 million trips analyzed for a comprehensive view of the industry's magnitude.
+- **Service Focus**: Concentrated analysis on yellow taxi services to deliver targeted enhancements.
+- **Zone Hotspots**: Recognition of high-demand zones to improve taxi availability and reduce wait times.
+- **Yearly Trends**: Monthly comparisons between 2019 and 2020, informing about the impacts of external events on service demands.
 
 ## Technology Stack
 
-During this data engineering programI used the following suite of technologies, libraries, and systems.
+A myriad of technologies were employed in this project:
 
-- **Python Libraries**: Incorporated Python libraries such as Pandas, NumPy, PyArrow, and others for data manipulation and processing tasks.
-- **Shell Scripting**: Used for automating repetitive tasks, managing system operations, and streamlining data processing workflows.
-- **Linux**: The preferred operating system for its stability, performance, and flexibility in managing data-intensive applications and services.
-- **PostgreSQL**: Employed for sophisticated database management and operations.
-- **Docker**: Utilized to containerize applications, ensuring consistent environments and deployment processes.
-- **Google Cloud Platform**: Integrated GCP's BigQuery for advanced data analytics, Cloud Storage for durable and scalable storage solutions, and Cloud SQL for fully-managed database services.
-- **Terraform**: Applied as an infrastructure-as-code tool to provision and manage cloud services and resources systematically.
-- **Airflow**: Adopted to orchestrate complex workflows, ensuring efficient and reliable ETL processes.
-- **DBT Cloud**: Implemented to transform data within the warehouse and construct data models seamlessly in the cloud.
-- **Apache Spark**: Deployed for processing large-scale data with speed and ease.
-- **Apache Kafka**: Leveraged for its real-time data streaming capabilities to process and move large amounts of data efficiently.
+- **Linux**: The operating system of choice for managing data-intensive applications.
+- **PostgreSQL**: A robust system for database management.
+- **Docker**: Used for application containerization, ensuring consistency across environments.
+- **Google Cloud Platform**: Utilized for its suite of services including BigQuery, Cloud Storage, and Cloud SQL.
+- **Terraform**: For provisioning and managing cloud services as code.
+- **Airflow**: For orchestrating and automating ETL pipelines.
+- **DBT Cloud**: For transforming data in the cloud-based warehouse.
+- **Apache Spark and Kafka**: For real-time data processing and streaming.
 
-## Key Business Impact of the Tip Prediction Model
+## Pioneering Tip Prediction with Machine Learning
 
-Through BigQuery, I implemented SQL-based supervised machine learning model to forecast tip amounts for different types of taxi. This way, we give taxi companies actionable insights that can impact their pricing strategies and enhance customer satisfaction. One of the most impactful outcomes is the ability to inform dynamic pricing models which adapt to tipping trends, thus maximizing profitability without compromising on service quality.
+Below is a SQL code snippet highlighting the machine learning model development, showcasing the approach taken to predict tipping behaviors, which has a significant impact on dynamic pricing and customer service strategies.
 
 ```sql
--- Hyperparameter tuning to optimize the prediction model
+-- Hyperparameter tuning to refine the prediction model
 CREATE OR REPLACE MODEL trips_data_all.tip_hyperparam_model
 OPTIONS
   (model_type='linear_reg',
   input_label_cols=['tip_amount'],
-  DATA_SPLIT_METHOD='AUTO_SPLIT',
+  DATA_SPLIT METHOD='AUTO_SPLIT',
   num_trials=5,
   max_parallel_trials=2,
   l1_reg=hparam_range(0, 20),
