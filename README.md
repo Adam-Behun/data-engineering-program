@@ -2,21 +2,17 @@
 
 ## Project Overview
 
-This project, titled "55 Million Rides in NYC," uses supervised machine learning to find tipping patterns in New York's taxi markets. By analyzing a vast dataset from the New York City Taxi and Limousine Commission (TLC), I developed a model that predicts fare and tip amounts, providing key insights that could impact the taxi industry's approach to pricing and customer service. 
+This project uses supervised machine learning to find tipping patterns in NYC taxi markets. By analyzing a vast dataset from the New York City Taxi and Limousine Commission (TLC), I developed a model that predicts fare and tip amounts, providing key insights that could impact the taxi industry's approach to pricing and customer service. 
 
 <p align="center">
   <img src="taxi.jpg" alt="Yellow Taxi - New York City" height="300"/>
 </p>
 
-## Data Description
-The project harnessed data from yellow and green taxis, and For-Hire Vehicles (FHV), encompassing numerous aspects of urban transportation. These records offer a granular look at service patterns and commuter behavior, forming the basis of our predictive analysis.
-
 ### Data Source
 The comprehensive dataset is available through the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page), ensuring a solid foundation for our analytics.
 
 ### Key Data Fields
-
-We processed critical fields that capture the essence of each trip, such as pick-up and drop-off times and locations, trip distances, fares, and more. These fields not only inform our model but also provide insights into passenger habits and preferences.
+We processed critical fields that capture the essence of each trip, such as pick-up and drop-off times and locations, trip distances, fares, and more.
 
 | Field Name             | Description                                      |
 |------------------------|--------------------------------------------------|
@@ -31,7 +27,6 @@ We processed critical fields that capture the essence of each trip, such as pick
 | `Passenger_Count`      | Number of passengers as reported by the driver. |
 
 ### FHV Data
-
 FHV data adds another layer, giving us a glimpse into the dispatching side of the industry and further enriching our analysis.
 
 | Field Name               | Description                                 |
@@ -42,7 +37,6 @@ FHV data adds another layer, giving us a glimpse into the dispatching side of th
 
 
 ## Data Pipeline Architecture
-
 The backbone of this analysis was a data pipeline designed to handle and process over 55 million taxi trip records. It combined Python scripting, the structured workflow orchestration of Apache Airflow, and the processing power of Apache Spark, all culminating in the comprehensive analytical capabilities of Google BigQuery.
 
 <p align="center">
@@ -55,7 +49,7 @@ The backbone of this analysis was a data pipeline designed to handle and process
   <img src="looker-visual.png" alt="Data Visualization in Looker" height="350" width="450"/>
 </p>
 
-The Looker dashboard above serves as a window into the extensive analysis conducted on NYC's yellow taxi usage over two years. It showcases daily traffic volumes, zone popularity, and service type distributions, all of which are instrumental in deciphering the DNA of NYC's taxi services.
+The Looker dashboard above serves as a window into the extensive analysis conducted on NYC's yellow taxi usage over two years. It showcases daily traffic volumes, zone popularity, and service type distributions. 
 
 ### Insights and Business Impact
 
@@ -67,8 +61,6 @@ The Looker dashboard above serves as a window into the extensive analysis conduc
 
 ## Technology Stack
 
-A myriad of technologies were employed in this project:
-
 - **Linux**: The operating system of choice for managing data-intensive applications.
 - **PostgreSQL**: A robust system for database management.
 - **Docker**: Used for application containerization, ensuring consistency across environments.
@@ -78,7 +70,7 @@ A myriad of technologies were employed in this project:
 - **DBT Cloud**: For transforming data in the cloud-based warehouse.
 - **Apache Spark and Kafka**: For real-time data processing and streaming.
 
-## Pioneering Tip Prediction with Machine Learning
+## Tip Prediction with Machine Learning
 
 Below is a SQL code snippet highlighting the machine learning model development, showcasing the approach taken to predict tipping behaviors, which has a significant impact on dynamic pricing and customer service strategies.
 
